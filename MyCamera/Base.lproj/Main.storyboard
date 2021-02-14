@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eti-eW-eB7">
+                                <rect key="frame" x="15" y="682" width="384" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="カメラ/フォトライブラリを起動する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ET4-xc-m9o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjS-0l-npL">
+                                <rect key="frame" x="15" y="817" width="384" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="写真を保存する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveImageButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I3r-Za-0jg"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gFj-Uj-7c2">
+                                <rect key="frame" x="15" y="59" width="384" height="608"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7M1-Aa-8jy">
+                                <rect key="frame" x="15" y="727" width="384" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.31142979452054792" blue="0.27188570205479451" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="エフェクト実行する">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="effectButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fai-0G-dDF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIP-nM-KcF">
+                                <rect key="frame" x="15" y="772" width="384" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.81287457191780821" blue="0.47530500856164382" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="デフォルトに戻す">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="defaultButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0z-jo-FWX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NIP-nM-KcF" secondAttribute="trailing" constant="15" id="06N-0k-VMQ"/>
+                            <constraint firstItem="HjS-0l-npL" firstAttribute="top" secondItem="NIP-nM-KcF" secondAttribute="bottom" constant="15" id="6Jv-Zw-Z91"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gFj-Uj-7c2" secondAttribute="trailing" constant="15" id="CCg-B0-gvl"/>
+                            <constraint firstItem="HjS-0l-npL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ca3-xN-OZ0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HjS-0l-npL" secondAttribute="trailing" constant="15" id="FHm-89-VOR"/>
+                            <constraint firstItem="eti-eW-eB7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GaJ-qP-M48"/>
+                            <constraint firstItem="NIP-nM-KcF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="IQp-45-JIL"/>
+                            <constraint firstItem="eti-eW-eB7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="NdR-46-ins"/>
+                            <constraint firstItem="NIP-nM-KcF" firstAttribute="top" secondItem="7M1-Aa-8jy" secondAttribute="bottom" constant="15" id="Oe3-2z-A3R"/>
+                            <constraint firstItem="gFj-Uj-7c2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="PwR-cp-iWW"/>
+                            <constraint firstItem="7M1-Aa-8jy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="SOM-56-oqy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7M1-Aa-8jy" secondAttribute="trailing" constant="15" id="fwW-j6-ZLe"/>
+                            <constraint firstItem="gFj-Uj-7c2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="hxu-Hk-v9O"/>
+                            <constraint firstItem="HjS-0l-npL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="iY7-d9-vqq"/>
+                            <constraint firstItem="gFj-Uj-7c2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k5l-MC-Jel"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eti-eW-eB7" secondAttribute="trailing" constant="15" id="rLk-A3-Vux"/>
+                            <constraint firstItem="eti-eW-eB7" firstAttribute="top" secondItem="gFj-Uj-7c2" secondAttribute="bottom" constant="15" id="tDI-TK-pf6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HjS-0l-npL" secondAttribute="bottom" constant="15" id="vVf-Dg-e1p"/>
+                            <constraint firstItem="7M1-Aa-8jy" firstAttribute="top" secondItem="eti-eW-eB7" secondAttribute="bottom" constant="15" id="wLI-Ft-Npv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pictureImage" destination="gFj-Uj-7c2" id="o0i-Sc-Rmr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-349.27536231884062" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
